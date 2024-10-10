@@ -33,9 +33,9 @@
         theme: {
           extend: {
             colors: {
-              primary: "#797DFC",
-              "primary-light": "#797DFC1A",
-              secondary: "#12132D",
+              primary: "#facc15",
+              "primary-light": "#fef9c3",
+              secondary: "#fde047",
             },
             fontFamily: {
               poppins: "Poppins",
@@ -50,6 +50,67 @@
     </script>
   </head>
   <body class="font-poppins">
+    <!-- Navbar Section -->
+    <nav class="w-full bg-white sticky top-0 z-10">
+      <section class="max-w-7xl mx-auto px-5 py-2">
+        <div class="navbar p-0">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a class="text-base font-medium text-black">Home</a></li>
+                <li>
+                  <a class="text-base font-medium text-gray-400">About Us</a>
+                </li>
+                <li>
+                  <a class="text-base font-medium text-gray-400">Category</a>
+                </li>
+                <li>
+                  <a class="text-base font-medium text-gray-400">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <a class="text-2xl ml-4 lg:ml-0 font-semibold">Foodie</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-base font-medium text-black">Home</a></li>
+              <li>
+                <a class="text-base font-medium text-gray-400">About Us</a>
+              </li>
+              <li>
+                <a class="text-base font-medium text-gray-400">Category</a>
+              </li>
+              <li>
+                <a class="text-base font-medium text-gray-400">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn bg-primary">Order Now</a>
+          </div>
+        </div>
+      </section>
+    </nav>
+
     <!-- Script -->
     <script src="./js/script.js"></script>
   </body>
