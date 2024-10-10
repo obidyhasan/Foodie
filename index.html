@@ -42,7 +42,7 @@
             },
             backgroundImage: (theme) => ({
               "hero-bg":
-                "linear-gradient(to top, rgb(17, 17, 17),rgba(17, 17, 17, 0)), url('./assets/banner.png')",
+                "linear-gradient(to top, rgb(17, 17, 17),rgba(17, 17, 17, 0)), url('./assets/banner.jpg')",
             }),
           },
         },
@@ -78,13 +78,13 @@
               >
                 <li><a class="text-base font-medium text-black">Home</a></li>
                 <li>
-                  <a class="text-base font-medium text-gray-400">About Us</a>
+                  <a class="text-base font-medium text-gray-500">About Us</a>
                 </li>
                 <li>
-                  <a class="text-base font-medium text-gray-400">Category</a>
+                  <a class="text-base font-medium text-gray-500">Category</a>
                 </li>
                 <li>
-                  <a class="text-base font-medium text-gray-400">Contact</a>
+                  <a class="text-base font-medium text-gray-500">Contact</a>
                 </li>
               </ul>
             </div>
@@ -94,13 +94,13 @@
             <ul class="menu menu-horizontal px-1">
               <li><a class="text-base font-medium text-black">Home</a></li>
               <li>
-                <a class="text-base font-medium text-gray-400">About Us</a>
+                <a class="text-base font-medium text-gray-500">About Us</a>
               </li>
               <li>
-                <a class="text-base font-medium text-gray-400">Category</a>
+                <a class="text-base font-medium text-gray-500">Category</a>
               </li>
               <li>
-                <a class="text-base font-medium text-gray-400">Contact</a>
+                <a class="text-base font-medium text-gray-500">Contact</a>
               </li>
             </ul>
           </div>
@@ -110,6 +110,31 @@
         </div>
       </section>
     </nav>
+
+    <!-- Header Section -->
+    <header class="w-full bg-hero-bg bg-cover bg-center bg-no-repeat">
+      <section class="text-center text-white space-y-6 py-60 px-5">
+        <h2
+          class="font-bold text-4xl sm:text-5xl max-w-2xl mx-auto leading-tight sm:leading-tight"
+        >
+          Tasty Recipes for Every <span class="text-primary">Occasion</span>
+        </h2>
+        <p class="text-sm font-light max-w-3xl mx-auto">
+          At Foodie Haven, we bring you the best of food culture, from
+          mouthwatering recipes to hidden restaurant gems. Join us on a
+          delicious journey to explore new flavors and cuisines!
+        </p>
+        <div class="w-full join flex justify-center">
+          <input
+            class="lg:w-3/12 sm:w-6/12 w-full input input-bordered rounded-lg join-item text-sm text-black"
+            placeholder="Search"
+          />
+          <button class="btn join-item rounded-lg bg-primary border-primary">
+            Search
+          </button>
+        </div>
+      </section>
+    </header>
 
     <!-- Script -->
     <script src="./js/script.js"></script>
