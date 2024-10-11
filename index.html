@@ -126,6 +126,7 @@
         </p>
         <div class="w-full join flex justify-center">
           <input
+            id="searchInput"
             class="lg:w-3/12 sm:w-6/12 w-full input input-bordered rounded-lg join-item text-sm text-black"
             placeholder="Search"
           />
@@ -153,7 +154,9 @@
         >
           <!-- category item -->
           <div
-            class="flex items-center justify-center gap-3 border px-5 py-1 rounded-full hover:bg-primary-light hover:border-primary-light"
+            id="categoryAllItem"
+            onclick="getFoodsByCategory(),setCategoryActive(this)"
+            class="categoryBtn flex items-center justify-center gap-3 border px-5 py-1 rounded-full hover:bg-primary-light hover:border-primary"
           >
             <img
               src="./assets/all.png"
@@ -170,7 +173,11 @@
           class="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
         ></section>
       </section>
-      <button class="btn bg-primary mx-8 mt-10">See More</button>
+      <div id="seeAllContainer" class="mt-16 hidden">
+        <button onclick="seeAllFoods()" class="btn bg-primary mx-8 px-20">
+          See More
+        </button>
+      </div>
     </main>
 
     <!-- Footer Section -->
