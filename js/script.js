@@ -67,9 +67,9 @@ const showFoods = (foods) => {
     foodContainer.innerHTML = "";
     foodContainer.classList.add("grid");
     foods.map((food) => {
-      const { strMeal, strMealThumb, strInstructions } = food;
+      const { strMeal, strMealThumb, strInstructions, idMeal } = food;
       const item = document.createElement("div");
-      item.className = "p-4 border rounded-md space-y-3";
+      item.className = "p-4 border rounded-md space-y-3 relative";
       item.innerHTML = `
           <figure class="w-full h-[200px]">
               <img
@@ -85,6 +85,8 @@ const showFoods = (foods) => {
           ${strInstructions || "N/A"}
           </p>
           <button class="btn bg-primary">Show Details</button>
+          <button onclick="cartClicked(${idMeal})" class="w-10 h-10 btn bg-black border-black text-xl text-white btn-sm rounded absolute -top-3 right-0"><i class='bx bx-cart'></i></button>
+
       `;
       foodContainer.appendChild(item);
     });
@@ -138,3 +140,33 @@ const seeAllFoods = () => {
 // Function Calls
 getCategory();
 getFoods();
+
+const getDataFromLocalStorage = () => {
+  let arr = [];
+  const storedDate = localStorage.getItem("cart");
+  if (storedDate) {
+    arr = JSON.parse(storedDate);
+  }
+
+  return arr;
+};
+
+const cartClicked = (id) => {
+  const storedData = getDataFromLocalStorage();
+  storedData.push(id);
+  localStorage.setItem("cart", JSON.stringify(storedData));
+
+  cartCount.innerText = storedData.length;
+};
+
+// Cart Section
+// cart count
+const cartCount = document.querySelector("#itemCount");
+const setCartCount = () => {
+  cartCount.innerText = getDataFromLocalStorage().length;
+};
+setCartCount();
+
+const cartBtn = () => {
+  window.location.href = "../cart.html";
+};

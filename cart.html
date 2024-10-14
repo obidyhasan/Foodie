@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodie</title>
+    <title>Foodie - Cart</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -130,61 +130,15 @@
       </section>
     </nav>
 
-    <!-- Header Section -->
-    <header class="w-full bg-hero-bg bg-cover bg-center bg-no-repeat">
-      <section class="text-center text-white space-y-6 py-60 px-5">
-        <h2
-          class="font-bold text-4xl sm:text-5xl max-w-2xl mx-auto leading-tight sm:leading-tight"
-        >
-          Tasty Recipes for Every <span class="text-primary">Occasion</span>
-        </h2>
-        <p class="text-sm font-light max-w-3xl mx-auto">
-          At Foodie Haven, we bring you the best of food culture, from
-          mouthwatering recipes to hidden restaurant gems. Join us on a
-          delicious journey to explore new flavors and cuisines!
-        </p>
-        <div class="w-full join flex justify-center">
-          <input
-            id="searchInput"
-            class="lg:w-3/12 sm:w-6/12 w-full input input-bordered rounded-lg join-item text-sm text-black"
-            placeholder="Search"
-          />
-          <button class="btn join-item rounded-lg bg-primary border-primary">
-            Search
-          </button>
-        </div>
-      </section>
-    </header>
-
     <!-- Main Section -->
     <main class="max-w-7xl mx-auto px-5 py-20 text-center">
       <!-- Foods Section -->
       <section>
-        <h2 class="font-bold text-3xl">Foodie Insights & Trends</h2>
+        <h2 class="font-bold text-3xl">Cart</h2>
         <p class="text-sm max-w-lg mx-auto mt-4">
           Stay updated with the latest food trends, tips for cooking at home,
           and interviews with top chefs.
         </p>
-
-        <!-- Category Section -->
-        <section
-          id="categoryContainer"
-          class="mt-20 flex flex-wrap gap-5 content-center justify-center"
-        >
-          <!-- category item -->
-          <div
-            id="categoryAllItem"
-            onclick="getFoodsByCategory(),setCategoryActive(this)"
-            class="categoryBtn flex items-center justify-center gap-3 border px-5 py-1 rounded-full hover:bg-primary-light hover:border-primary"
-          >
-            <img
-              src="./assets/all.png"
-              class="w-12 h-12 object-contain"
-              alt=""
-            />
-            <h4>All</h4>
-          </div>
-        </section>
 
         <!-- Foods Container -->
         <section
@@ -192,24 +146,9 @@
           class="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
         ></section>
       </section>
-      <div id="seeAllContainer" class="mt-16 hidden">
-        <button onclick="seeAllFoods()" class="btn bg-primary mx-8 px-20">
-          See More
-        </button>
-      </div>
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-primary-light">
-      <section
-        class="max-w-7xl mx-auto px-5 py-10 flex items-center justify-between"
-      >
-        <h1 class="font-semibold text-2xl">Foodie</h1>
-        <p>&#169; Foodie. All rights revers</p>
-      </section>
-    </footer>
-
     <!-- Script -->
-    <script src="./js/script.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>
